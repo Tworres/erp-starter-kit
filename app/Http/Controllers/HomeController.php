@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use App\Attributes\Teste;
 
+#[Teste]
 class HomeController extends Controller
 {
-    public function index(): View{
+
+    #[Teste]
+    public function index($string = ''): View
+    {
         return view('contents.home');
     }
 }

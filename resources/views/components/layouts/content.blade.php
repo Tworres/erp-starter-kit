@@ -2,11 +2,13 @@
 
 @section('content')
     <div class="d-flex">
-        <x-side-menu></x-side-menu>
+        <x-side-menu height="50px"></x-side-menu>
         <div class="d-flex flex-column flex-grow-1">
-            <x-top-menu></x-top-menu>
+            <x-top-menu height="50px"></x-top-menu>
             <div class="flex-grow-1 p-5" style="background: #e3e3e3">
-                {{$slot}}
+                <div class="container-sm">
+                    {{ $slot }}
+                </div>
             </div>
             <x-footer></x-footer>
         </div>
@@ -15,9 +17,9 @@
 
 @section('scripts-footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous">
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
+    <script src="https://kit.fontawesome.com/c513091341.js" crossorigin="anonymous"></script>
 @endsection
 
 @section('styles')
